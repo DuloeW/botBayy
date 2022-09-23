@@ -10,11 +10,26 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
+const urgent = function(value) {
+  while(value < 5) {
+    message.channel.send("@everyone")
+    if(value == 5) {
+      message.channel.send("Mission succes")
+    }
+    value++
+  }
+}
 
-client.on('createMessage', () => {
-  return 'berhasi'
+client.on('createMessage', message => {
+  if(message.content == "p") {
+    message.send("Hallo");
+  }
 });
 
 
+
+
+
+
 // Login to Discord with your client's token
-client.login("OTc2NTA5MDk1MTE5MDQ0NjA4.GkovpX.jJlVXJJXFK93X0wTl0jBYppmUky4yMjPmW0NEY");
+client.login("OTc2NTA5MDk1MTE5MDQ0NjA4.GpsvAR.jitAopGXXXzogQ3mfbrMpLUDwe8U0sfAsRAqMg");
